@@ -1,0 +1,48 @@
+.header-contacts {
+	display: flex;
+	justify-content: space-between;
+
+	a {
+		font-size: 16px;
+		color: @sec ;
+		display: inline-block;
+		font-family: @ff2R;
+		.tr;
+
+		&:hover {
+			color: @ac2;
+		}
+	}
+
+	.contacts-phone {
+		display: flex;
+
+		&:hover {
+			.phone-icon path {
+				fill: @ac2;
+			}
+		}
+
+
+		.phone-icon {
+			margin-right: 11px;
+			position: relative;
+			top: 2px;
+
+			path {
+				.tr;
+			}
+		}
+
+		a+a {
+			margin-left: 11px;
+		}
+	}
+
+	.contacts-email {
+		a {
+			text-transform: uppercase;
+		}
+
+	}
+}
