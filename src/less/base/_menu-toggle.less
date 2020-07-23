@@ -4,10 +4,16 @@
 	padding-left: 8px;
 	padding-right: 8px;
 	z-index: 100;
-
+	cursor: pointer;
 	width: 52px;
 	height: 52px;
 	position: relative;
+
+	&:hover {
+		span {
+			transform: rotate(180deg)
+		}
+	}
 
 	@media(max-width:991px) {
 		display: flex;
@@ -66,7 +72,7 @@
 	position: absolute;
 	top: 0;
 	left: -60px;
-
+	cursor: pointer;
 	width: 60px;
 	height: 60px;
 	// display: flex;
@@ -74,6 +80,12 @@
 	align-items: center;
 	background-color: @sec3;
 	display: none;
+
+	&:hover {
+		span {
+			transform: rotate(90deg)
+		}
+	}
 
 	@media(max-width:991px) {
 		display: flex;

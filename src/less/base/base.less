@@ -78,13 +78,14 @@ button {
 	left: 0;
 	right: 0;
 	background-color: rgba(0, 0, 0, .75);
-	backdrop-filter: blur(3px);
+
 	display: none;
 	z-index: 10;
 }
 
 #overlay.active {
 	display: block;
+	// backdrop-filter: blur(3px);
 }
 
 section {
@@ -243,6 +244,7 @@ section {
 
 .section-title {
 	margin-bottom: 60px;
+	max-width: 970px;
 	.title-2;
 
 	p:first-child {
