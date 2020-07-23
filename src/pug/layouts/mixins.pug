@@ -1,6 +1,13 @@
 mixin btn(text, madalName)
 	button.button(data-toggle="modal" data-target=" "+ madalName)&attributes(attributes) #{text}
 
+mixin service-card(imgName, title)
+	a(href="#!").serv-card.mb-30
+		.card-img
+			img(src="img/main-page/service-cards/"+ imgName +".jpg", alt="img")
+		.card-title.title-3
+			p #{title}
+
 //- SVG
 mixin logo
 	<svg width="73" height="58" viewBox="0 0 73 58" fill="none" xmlns="http://www.w3.org/2000/svg">
