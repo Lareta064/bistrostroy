@@ -1,4 +1,4 @@
-header.header
+.header-top
 	.container
 		.header-contacts
 			.contacts-phone
@@ -8,3 +8,52 @@ header.header
 				a(href="#!") +7 (996) 129-77-93
 			.contacts-email
 				a(href="#!") bystro-stroy@list.ru
+		.header-nav
+			.header-nav__content
+				a(href="#").logo
+					.logo-icon
+						+logo
+					.logo-text
+						span Быстро-Строй
+						span строительная компания
+				.header-menu
+					ul
+						li
+							a(href="#!") Главная
+						li
+							a(href="aboutus.html") о нас
+						li
+							a(href="#!") услуги
+						li
+							a(href="#!") портфолио
+						li
+							a(href="#!") контакты
+					.search-block
+						button.search-icon
+							+search(class="search-ic active")
+							span.times-ic +
+			.search-form-wrapper
+				form(action="#").search-form
+					.form-field
+						input(type="text" name="search" placeholder="Введите слово для поиска")
+						button(type="submit")
+							i.fas.fa-search
+header.header
+	.container
+		.header-content
+			.title-group
+				h1
+					span.head-1 Быстро-Строй
+					span.title-1 Быстровозводимые каркасные сооружения
+			+btn('Получить консультацию')(class=" button--big")
+			.marker-list
+				ul
+					li 
+						span Холодные здания
+						span Холодные здания
+					li
+						span
+						span
+					li
+						span
+						span
