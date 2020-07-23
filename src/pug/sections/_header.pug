@@ -1,6 +1,14 @@
+//верхняя панель в шапке
 .header-top
 	.container
 		.header-contacts
+			a(href="#").logo.logo-mobile
+				.logo-icon
+					img(src="img/logo/logo-white.png", alt="logo")
+				.logo-text
+					span Быстро-Строй
+					span строительная компания
+					
 			.contacts-phone
 				.phone-icon
 					+phone
@@ -8,7 +16,12 @@
 				a(href="#!") +7 (996) 129-77-93
 			.contacts-email
 				a(href="#!") bystro-stroy@list.ru
+			.menu-toggle
+				span
+		//навигация в верхней панели шапки
 		.header-nav
+			.close-mobMenu
+				span
 			.header-nav__content
 				a(href="#").logo
 					.logo-icon
@@ -18,7 +31,7 @@
 						span строительная компания
 				.header-menu
 					ul
-						li
+						li.active
 							a(href="#!") Главная
 						li
 							a(href="aboutus.html") о нас
@@ -32,28 +45,31 @@
 						button.search-icon
 							+search(class="search-ic active")
 							span.times-ic +
+			//форма поиска в верхней панели
 			.search-form-wrapper
 				form(action="#").search-form
 					.form-field
 						input(type="text" name="search" placeholder="Введите слово для поиска")
 						button(type="submit")
 							i.fas.fa-search
+//шапка
 header.header
 	.container
 		.header-content
+			.video-wrapper(style='background-image: url(img/content-img/poster.jpg)')
 			.title-group
-				h1
-					span.head-1 Быстро-Строй
-					span.title-1 Быстровозводимые каркасные сооружения
+				h1.title-1
+					span Быстро-Строй
+					span Быстровозводимые <br> каркасные <br> сооружения
 			+btn('Получить консультацию')(class=" button--big")
-			.marker-list
+			.marker-list.marker-list--disk
 				ul
 					li 
 						span Холодные здания
-						span Холодные здания
+						span от 1700 руб. за кв.м
 					li
-						span
-						span
+						span  Утепленные здания (Полистовая сборка)
+						span  от 3000 руб. за кв.м
 					li
-						span
-						span
+						span Утепленные здания (Обшитые сендвич панелями)
+						span от 4000 руб. за кв.м

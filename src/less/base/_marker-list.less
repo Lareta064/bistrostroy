@@ -1,0 +1,27 @@
+.marker-list {
+	li {
+		position: relative;
+		padding-left: 20px;
+
+		&:after {
+			content: '\2714';
+			position: absolute;
+			left: 0;
+			top: 0;
+			color: #FABC3D;
+		}
+
+		span {
+			display: block;
+		}
+	}
+}
+
+.marker-list.marker-list--disk {
+	li:after {
+		content: '\2022';
+		font-size: 35px;
+		line-height: 1;
+
+	}
+}

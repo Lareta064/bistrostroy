@@ -67,6 +67,26 @@ button {
 	transition: .3s;
 }
 
+.noscroll {
+	overflow: hidden;
+}
+
+#overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, .75);
+	backdrop-filter: blur(3px);
+	display: none;
+	z-index: 10;
+}
+
+#overlay.active {
+	display: block;
+}
+
 .container {
 	width: 100%;
 	max-width: 1170px;
@@ -88,14 +108,47 @@ button {
 	}
 
 }
-.head-1{
+
+.head-1 {
 	font-family: @ff2R;
 	font-size: 45px;
 	line-height: 1.22;
+
+	@media(max-width:579px) {
+		font-size: 22px;
+	}
 }
-.title-1{
+
+.title-1 {
 	font-size: 60px;
 	line-height: 1.07;
 	font-weight: 700;
+
+	@media(max-width:1439px) {
+		font-size: 50px;
+	}
+
+	@media(max-width:1199px) {
+		font-size: 44px;
+	}
+
+	@media(max-width:991px) {
+		font-size: 40px;
+	}
+
+	@media(max-width:767px) {
+		font-size: 36px;
+	}
+
+	@media(max-width:579px) {
+		font-size: 32px;
+	}
+
+	@media(max-width:424px) {
+		font-size: 27px;
+	}
 }
-.header-content button{margin-top:40px;}
+
+.header-content button {
+	margin-top: 40px;
+}

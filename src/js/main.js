@@ -1,5 +1,6 @@
 $(document).ready(function () {
-
+	const bodyElement = document.querySelector('body');
+	const overlay = document.querySelector('#overlay');
 	// показать строку поиска в шапке
 	const buttonShowSearchForm = document.querySelector('.search-block');
 	const buttonIconSearch = buttonShowSearchForm.querySelector('.search-ic');
@@ -16,6 +17,47 @@ $(document).ready(function () {
 			buttonIconTimes.classList.add('active');
 			buttonIconSearch.classList.remove('active');
 		}
-
 	})
+
+	//Показать мобильное меню
+	const showMobMenu = document.querySelector('.menu-toggle');
+	const hideMobMenu = document.querySelector('.close-mobMenu');
+	const mobMenu = document.querySelector('.header-nav');
+	const mobMenuSearchForm = document.querySelector('.search-form-wrapper input')
+
+	showMobMenu.addEventListener('click', function () {
+		mobMenu.classList.add('active');
+		overlay.classList.add('active');
+		bodyElement.classList.add('noscroll');
+	});
+
+	//Скрыть мобильное меню
+	function hideMobileMenu() {
+		mobMenu.classList.remove('active');
+		overlay.classList.remove('active');
+		bodyElement.classList.remove('noscroll');
+	}
+
+	hideMobMenu.addEventListener('click', function () {
+		hideMobileMenu()
+	});
+
+	//Скрыть мобильное меню  по клику вне меню
+
+	bodyElement.addEventListener('click', function (e) {
+		e.stopImmediatePropagation;
+		if (mobMenu.classList.contains('active')) {
+			if (e.target != showMobMenu && e.target != mobMenuSearchForm) {
+				hideMobileMenu();
+			}
+
+		}
+	});
+
+	//Скрыть мобильное меню  при ресайзе экрана
+
+	window.addEventListener('resize', function () {
+		hideMobileMenu();
+	})
+
 })
