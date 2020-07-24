@@ -1,8 +1,167 @@
 section.projects {
-	padding-top: 380px;
+	padding-top: 365px;
 
 	.section-title {
 		margin-left: auto;
 		margin-right: auto;
 	}
+}
+
+.project-cards {
+	position: relative;
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+.project-cards__item {
+	float: left;
+	margin-right: 30px;
+	margin-bottom: 30px;
+	height: 285px;
+	overflow: hidden;
+	position: relative;
+	display: block;
+
+	.hover-block {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, .78);
+		z-index: 2;
+		opacity: 0;
+		transition: .3s;
+
+		p {
+			position: absolute;
+			left: 60px;
+			bottom: 27%;
+			color: #fff;
+			.title-4;
+
+			// &:after,
+			// &:before {
+			// 	content: '';
+			// 	position: absolute;
+			// 	background-color: #fff;
+			// 	transition: .5s;
+			// }
+
+			// &:after {
+			// 	left: -45px;
+			// 	bottom: -20px;
+			// 	height: 1px;
+			// 	width: 150px;
+			// 	width: 0px;
+			// }
+
+			// &:before {
+			// 	left: -30px;
+			// 	bottom: -35px;
+			// 	width: 1px;
+
+			// 	height: 0px;
+			// }
+		}
+
+		&:after,
+		&:before {
+			content: '';
+			position: absolute;
+			background-color: #fff;
+			transition: .5s;
+
+		}
+
+		&:after {
+			left: 15px;
+			bottom: 22%;
+			height: 1px;
+			width: 150px;
+			width: 0px;
+		}
+
+		&:before {
+			left: 30px;
+			bottom: 14%;
+			width: 1px;
+
+			height: 0px;
+		}
+	}
+}
+
+.project-cards__item:hover {
+	.hover-block {
+		opacity: 1;
+
+		&:after {
+			width: 70%;
+		}
+
+		&:before {
+			height: 70%;
+		}
+	}
+}
+
+.project-cards__item:first-child {
+	height: 600px;
+}
+
+@media(max-width:1199px) {
+	.project-cards__item {
+		height: 231px;
+		margin-right: 15px;
+		margin-bottom: 20px;
+
+		img {
+			max-width: unset;
+			height: 100%;
+			width: auto;
+		}
+	}
+
+	.project-cards__item:first-child {
+		height: 482px;
+	}
+}
+
+@media(max-width:991px) {
+	.project-cards__item {
+		height: 172px;
+		margin-right: 10px;
+		margin-bottom: 15px;
+
+
+	}
+
+	.project-cards__item:first-child {
+		height: 361px;
+	}
+}
+
+// .project-cards__item:nth-child(2),
+// .project-cards__item:last-child {
+// 	width: 40.5%;
+
+// 	@media(max-width: 991px) {
+// 		height: 233px;
+// 	}
+// }
+
+// .project-cards__item:nth-child(3),
+// .project-cards__item:nth-child(4) {
+// 	width: 25%;
+
+// }
+
+.project-cards__item:nth-child(3),
+.project-cards__item:nth-child(5) {
+	margin-right: 0;
 }
