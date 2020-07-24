@@ -7,7 +7,11 @@ mixin service-card(imgName, title)
 			img(src="img/main-page/service-cards/"+ imgName +".jpg", alt="img")
 		.card-title.title-3
 			p #{title}
-
+mixin number-list(num, title, text)
+	span #{num}
+	.text-box
+		h4.head-4 #{title}
+		p #{text}
 //- SVG
 mixin logo
 	<svg width="73" height="58" viewBox="0 0 73 58" fill="none" xmlns="http://www.w3.org/2000/svg">
