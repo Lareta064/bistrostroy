@@ -15,6 +15,7 @@ body {
 	color: @pr;
 	font-family: @ff1;
 	font-size: 16px;
+	font-weight: 300;
 	line-height: 1.62;
 
 
@@ -248,9 +249,14 @@ section {
 	line-height: 1.36;
 	color: @pr;
 
-	@media(max-width:767px) {
+	@media(max-width:1199px) {
+		font-size: 22px;
+	}
+
+	@media(max-width:991px) {
 		font-size: 20px;
 	}
+
 }
 
 .section-title {
@@ -268,6 +274,17 @@ section {
 	@media(max-width:767px) {
 		margin-bottom: 40px;
 	}
+}
+
+.block-title {
+	font-size: 48px;
+	line-height: 1;
+	color: @pr;
+	font-weight: 500;
+}
+
+.block-title--color {
+	color: @ac2;
 }
 
 .text-18 {

@@ -1,0 +1,156 @@
+.about-info {
+	height: 630px;
+	background: rgba(0, 0, 0, .9);
+	background-position: 0 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	padding-top: 80px;
+
+	@media(max-width:767px) {
+		height: 900px;
+		padding-bottom: 80px;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, .8);
+
+	}
+
+}
+
+.about-info__content {
+	position: relative;
+
+	h2 {
+		margin-bottom: 50px;
+	}
+}
+
+.benefit-text {
+	.head-4 {
+		color: @ac2;
+		text-transform: uppercase;
+	}
+
+	p {
+		color: #fff;
+
+
+		@media(max-width:1199px) {
+			font-size: 15px;
+		}
+	}
+}
+
+.benefits-list {
+	.benefit-icon {
+		position: absolute;
+		top: -15px;
+		left: 0;
+
+		svg {
+			max-width: 100%;
+		}
+
+		@media(max-width:991px) {
+			width: 45px;
+			height: 45px;
+			position: relative;
+			top: -20px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@media(max-width:767px) {
+			width: 60px;
+			height: 60px;
+		}
+
+
+	}
+
+	.benefit-item {
+		position: relative;
+		padding-left: 80px;
+
+
+		@media(max-width:991px) {
+			padding-left: 0;
+			text-align: center;
+		}
+
+		@media(max-width:767px) {
+			margin-bottom: 50px;
+		}
+
+	}
+}
+
+.price-block {
+	background-color: @ac2;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	position: relative;
+	background-position: 0 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transform: translateY(30%);
+
+	@media(max-width: 1199px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	@media(max-width: 767px) {
+		padding-left: 15px;
+		padding-right: 15px;
+		transform: translateY(0%);
+
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(250, 188, 61, .95);
+
+	}
+
+	.price-block__content {
+		position: relative;
+		z-index: 1;
+		max-width: 950px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 95%;
+
+		.block-title h2 {
+			margin-bottom: 20px;
+		}
+	}
+
+	.price-list {
+		margin-top: 40px;
+	}
+
+	.price-list__item {
+		text-align: center;
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@media(max-width: 767px) {
+			margin-bottom: 40px;
+		}
+	}
+}
