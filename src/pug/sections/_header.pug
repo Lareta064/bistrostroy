@@ -18,45 +18,46 @@
 				a(href="#!") bystro-stroy@list.ru
 			.menu-toggle
 				span
-		//навигация в верхней панели шапки
-		.header-nav
-			.close-mobMenu
-				span
-			.header-nav__content
-				a(href="#").logo
-					.logo-icon
-						+logo
-					.logo-text
-						span Быстро-Строй
-						span строительная компания
-				.header-menu
-					ul
-						li.active
-							a(href="#!") Главная
-						li
-							a(href="aboutus.html") о нас
-						li
-							a(href="#!") услуги
-						li
-							a(href="#!") портфолио
-						li
-							a(href="#!") контакты
-					.search-block
-						button.search-icon
-							+search(class="search-ic active")
-							span.times-ic +
-			//форма поиска в верхней панели
-			.search-form-wrapper
-				form(action="#").search-form
-					.form-field
-						input(type="text" name="search" placeholder="Введите слово для поиска")
-						button(type="submit")
-							i.fas.fa-search
+		//навигация в верхней панели шапки, она же фиксирующаяся шапка
+		.fix-header
+			.header-nav
+				.close-mobMenu
+					span
+				.header-nav__content
+					a(href="#").logo
+						.logo-icon
+							+logo
+						.logo-text
+							span Быстро-Строй
+							span строительная компания
+					.header-menu
+						ul
+							li.active
+								a(href="#!") Главная
+							li
+								a(href="aboutus.html") о нас
+							li
+								a(href="#!") услуги
+							li
+								a(href="#!") портфолио
+							li
+								a(href="#!") контакты
+						.search-block
+							button.search-icon
+								+search(class="search-ic active")
+								span.times-ic +
+				//форма поиска в верхней панели
+				.search-form-wrapper
+					form(action="#").search-form
+						.form-field
+							input(type="text" name="search" placeholder="Введите слово для поиска")
+							button(type="submit")
+								i.fas.fa-search
 //шапка
 header.header
 	.container
 		.header-content
-			.video-wrapper(style='background-image: url(img/content-img/poster.jpg)')
+			.video-wrapper(style='background-image: url(img/main-page/poster.jpg)')
 			.title-group
 				h1.title-1
 					span Быстро-Строй

@@ -1,0 +1,59 @@
+.header-fixed-mobile {
+	position: fixed;
+	height: 104px;
+	background-color: @pr;
+	background-image: url(../img/header/header-top.jpg);
+	background-size: cover;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	padding-top: 35px;
+	z-index: 20;
+	transform: translateY(-100%);
+
+	@media(max-width:991px) {
+		height: 90px;
+		padding-top: 22px;
+	}
+
+}
+
+@media(min-width:992px) {
+	.header-fixed-mobile {
+		display: none;
+	}
+}
+
+.header-fixed-mobile.active,
+.fix-header.active {
+	position: fixed;
+	background-color: @ac2;
+	top: 0;
+	animation-name: showUp;
+	animation-duration: .5s;
+	animation-fill-mode: forwards;
+	right: 0;
+	left: 0;
+	z-index: 20;
+
+	transition: .8s;
+
+	.header-nav {
+		max-width: 1170px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: transparent;
+		top: 0;
+	}
+}
+
+@keyframes showUp {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
