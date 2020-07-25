@@ -115,7 +115,63 @@ $(document).ready(function () {
 				items: 3
 			}
 		}
-	})
+	});
+
+	// маска для телефона
+	$(".phone").mask("+7(999)999-99-99");
+	$.fn.setCursorPosition = function (pos) {
+		if ($(this).get(0).setSelectionRange) {
+			$(this).get(0).setSelectionRange(pos, pos);
+		} else if ($(this).get(0).createTextRange) {
+			var range = $(this).get(0).createTextRange();
+			range.collapse(true);
+			range.moveEnd('character', pos);
+			range.moveStart('character', pos);
+			range.select();
+		}
+	};
+	$('input.phone').click(function () {
+		$(this).setCursorPosition(3); // set position number
+	});
+	/*---ПОКАЗАТЬ ВОСКЛИЦАТЕЛЬНЫЙ ЗНАК В ИНПУТЕ */
+	const checkboxGroup = document.querySelectorAll('label.form-label');
+	const requiredInputs = document.querySelectorAll('.form-group  input[type="text"]');
+	const textareaElement = document.querySelector('.form-group textarea');
+	for (let item of requiredInputs) {
+		//по клику в текстовый инпут убираем восклиц знак и активируем плейсхолдер
+		const thisParent = item.closest('.form-group');
+		item.addEventListener('focus', function () {
+			thisParent.classList.remove('error');
+			thisParent.querySelector('.fake-placeholder').classList.add('active');
+
+		});
+		//по блюру у пустого инпута деактивируем плейсхолдер
+		item.addEventListener('blur', function () {
+			if (this.value.length == 0) {
+				thisParent.querySelector('.fake-placeholder').classList.remove('active');
+			}
+		})
+	}
+
+	/*ВАЛИДАЦИЯ ФОРМЫ */
+	$("#contact-form").on('submit', function (event) {
+		event.preventDefault();
+
+		let success = false;
+
+		for (let item of requiredInputs) {
+			const thisParent = item.closest('.form-group');
+
+			if (item.value.length == 0) {
+				thisParent.classList.add('error');
+				success = false;
+
+			} else {
+				success = true;
+			}
+		}
+	});
+
 
 
 })

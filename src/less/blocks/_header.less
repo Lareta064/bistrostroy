@@ -7,6 +7,7 @@
     padding-top: 180px;
     padding-bottom: 125px;
     overflow: hidden;
+    max-height: 820px;
 
     .marker-list {
         ul {
@@ -39,10 +40,6 @@
         padding-bottom: 100px
     }
 
-    // @media(max-width:1199px) {
-    //     padding-top: 130px;
-    //     padding-bottom: 100px
-    // }
     @media(max-width:991px) {
         padding-top: 120px;
         padding-bottom: 80px;
@@ -80,8 +77,10 @@
         padding-bottom: 80px;
 
         .marker-list {
+            display: none;
+
             ul {
-                display: block;
+                // display: block;
             }
 
             li {
@@ -107,7 +106,10 @@
         }
     }
 
-    @media(max-width:579px) {}
+    @media(max-width:424px) {
+        height: 400px;
+        padding-top: 150px;
+    }
 
 
 }
@@ -116,11 +118,24 @@
 
     .marker-list {
         margin-top: 70px;
+
+        @media(max-width: 991px) {
+            margin-top: 30px;
+        }
     }
 }
 
 .header-content button {
     margin-top: 40px;
+
+    @media(max-width: 1439px) {
+        margin-top: 20px;
+    }
+
+    @media(max-width: 991px) {
+        margin-top: 10px;
+    }
+
 }
 
 .title-group {
@@ -139,26 +154,188 @@
         }
     }
 
-
     max-width: 600px;
     margin-bottom: 30px;
 
 }
 
-.video-wrapper {
+.gif-wrapper {
     position: absolute;
-    left: 48%;
-    top: -15%;
-    width: 250px;
-    padding-top: 50%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    clip-path: ellipse(60px 40px at 75px 30px);
-
-
+    right: -6%;
+    top: -25%;
+    width: 880px;
+    height: 860px;
     overflow: hidden;
     z-index: 1;
+    border-radius: 110px;
+    transform: rotate(51deg);
 
+
+    .play-icon {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        z-index: 5;
+        width: 40px;
+        width: 40px;
+        cursor: pointer;
+        .tr;
+
+        &:hover {
+            opacity: .8;
+        }
+
+        @media(max-width:767px) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    img {
+        transform: rotate(-51deg) translate(-10%, 50%) scale(1.8);
+        position: relative;
+    }
+
+    @media(max-width: 1599px) {
+        width: 680px;
+        height: 600px;
+        top: -10%;
+        right: -10%;
+    }
+
+    @media(max-width: 1439px) {
+        width: 600px;
+        height: 600px;
+        top: -15%;
+    }
+
+    @media(max-width: 1199px) {
+        width: 490px;
+        height: 460px;
+        right: -9%;
+        top: -14%;
+        border-radius: 80px;
+
+        img {
+            transform: rotate(-51deg) translate(-10%, 50%) scale(1.6);
+
+        }
+    }
+
+    @media(max-width: 991px) {
+        width: 480px;
+        height: 400px;
+        right: -8%;
+        top: -20%;
+    }
+
+    @media(max-width:767px) {
+        border-radius: 40px;
+        right: -9%;
+        top: -17%;
+        width: 380px;
+        height: 340px;
+    }
+
+    @media(max-width:579px) {
+
+        right: -10%;
+        top: -14%;
+        width: 280px;
+        height: 260px;
+    }
+
+    @media(max-width: 424px) {
+        width: 200px;
+        height: 190px;
+        top: -10%;
+
+
+    }
+}
+
+// video modal
+.modal-backdrop .fade {
+    // opacity: .8;
+    // background-color: rgba(0, 0, 0, .95);
+}
+
+.video-modal button.close {
+    position: absolute;
+    border: 0px;
+    right: 5%;
+    top: 5%;
+    text-shadow: none;
+    z-index: 10;
+    display: block;
+    opacity: 1;
+    outline: none !important;
+    cursor: pointer;
+
+    &:hover {
+        opacity: .7;
+    }
+
+    span {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        display: block;
+        cursor: pointer;
+
+        @media(max-width: 1199px) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    span:after {
+        content: '';
+        position: absolute;
+        background-color: @ac2;
+        height: 80px;
+        width: 2px;
+        top: 0;
+        bottom: 0;
+        transform: rotate(45deg)
+    }
+
+    span:before {
+        content: '';
+        position: absolute;
+        background-color: @ac2;
+        height: 80px;
+        width: 2px;
+        top: 0;
+        bottom: 0;
+        transform: rotate(-45deg)
+    }
+
+    @media(max-width: 1199px) {
+
+        span:before,
+        span:after {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+.video-modal .modal-dialog {
+    max-width: 1000px;
+
+    .video {
+        background-color: #000;
+    }
+
+    @media(max-width:1040px) {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .modal-body {
+        padding: 0;
+    }
 }
