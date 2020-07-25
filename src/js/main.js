@@ -97,4 +97,25 @@ $(document).ready(function () {
 		tabIcon.removeClass("rotate");
 	});
 
+	$('.clients-logo').owlCarousel({
+		items: 1,
+		loop: true,
+		dots: true,
+		dotsSpeed: 800,
+		smartSpeed: 800,
+		autoplay: true,
+		autoplayTimeout: 3000,
+		autoplayHoverPause: true,
+
+		responsive: {
+			425: {
+				items: 2
+			},
+			767: {
+				items: 3
+			}
+		}
+	})
+
+
 })
