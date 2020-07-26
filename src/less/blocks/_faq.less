@@ -1,27 +1,27 @@
 // FAQ
 .faq {
 	padding-bottom: 100px;
-	padding-top: 160px;
+	padding-top: 100px;
 
 	h2 {
-		margin-bottom: 100px;
+		margin-bottom: 60px;
 	}
 
 	@media(max-width:1199px) {
 		padding-bottom: 100px;
-		padding-top: 100px;
+		padding-top: 70px;
 		margin-bottom: 70px;
 	}
 
 	@media(max-width:991px) {
 		padding-bottom: 70px;
-		padding-top: 80px;
+		padding-top: 60px;
 		margin-bottom: 50px;
 	}
 
 	@media(max-width:767px) {
 		padding-bottom: 50px;
-		padding-top: 60px;
+		padding-top: 50px;
 	}
 }
 
@@ -56,8 +56,8 @@
 		}
 	}
 
-	.btn-link {
-		font-size: 18px;
+	button.btn-link {
+		font-size: 20px;
 		line-height: 1.56;
 		font-weight: 500;
 		color: @pr;
@@ -69,6 +69,11 @@
 		outline: none !important;
 		padding-right: 40px;
 		text-decoration: none !important;
+		font: 500 20px @ff1;
+
+		@media(max-width:1199px) {
+			font-size: 18px;
+		}
 	}
 
 	.arrow {
@@ -88,9 +93,15 @@
 		padding-bottom: 30px;
 		padding-right: 40px;
 		padding-top: 0;
+		font-size: 20px;
+
+		@media(max-width:1199px) {
+			font-size: 18px;
+		}
 
 		@media(max-width:767px) {
 			padding-right: 40px;
+			font-size: 16px;
 		}
 	}
 }
