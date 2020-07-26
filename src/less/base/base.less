@@ -278,7 +278,11 @@ section {
 	max-width: 970px;
 	.title-2;
 
-	p:first-child {
+	span {
+		display: block;
+	}
+
+	span:first-child {
 		font-family: @ff2R;
 		line-height: 1.29;
 		font-size: 0.875em;
@@ -290,7 +294,7 @@ section {
 	}
 }
 
-
+.page-title,
 .block-title h2 {
 	font-size: 40px;
 	line-height: 1.2;
@@ -342,5 +346,44 @@ section {
 
 	@media(max-width:767px) {
 		font-size: 22px;
+	}
+}
+
+.breadcrb {
+	margin-top: 25px;
+
+	a {
+		display: inline-block;
+		position: relative;
+		margin-right: 18px;
+		color: @ac2;
+		.tr;
+
+
+		&:after {
+			content: '\2013';
+			position: absolute;
+			right: -13px;
+			top: 0px;
+		}
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	a:last-child {
+		cursor: default;
+		color: #fff;
+		margin-right: 0;
+
+		&:after {
+			display: none;
+		}
+
+		&:hover {
+			color: #fff;
+
+		}
 	}
 }
